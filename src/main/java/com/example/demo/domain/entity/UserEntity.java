@@ -1,18 +1,19 @@
 package com.example.demo.domain.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import lombok.*;
 
 @Entity
 @Table(name="user_table")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
 public class UserEntity {
 
     @Id

@@ -27,6 +27,9 @@ repositories {
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
 	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.springframework.boot:spring-boot-starter-aop')
+	compile group: 'com.google.guava', name: 'guava', version: '14.0'
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: 'latest.integration'
 	runtimeOnly('org.springframework.boot:spring-boot-devtools')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }

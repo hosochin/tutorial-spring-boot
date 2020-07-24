@@ -1,1 +1,20 @@
-
+spring:
+  datasource:
+    sample01:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3315/sample01
+      username: root
+      password: secret
+    sample02:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3316/sample02
+      username: root
+      password: secret
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  data:
+    rest:
+      base-path: /api

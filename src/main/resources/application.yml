@@ -1,5 +1,5 @@
 spring:
   cache:
-    cache-names: sampleCache
+    cache-names: sampleCache, sampleCache2
     caffeine:
-      spec: expireAfterWrite=3s
+      spec: refreshAfterWrite=3s

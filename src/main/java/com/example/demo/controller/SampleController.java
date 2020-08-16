@@ -20,6 +20,7 @@ public class SampleController {
     public String get(@RequestParam(name = "message") String message) {
         log.info("処理開始");
         String str = sampleService.sampleCache(message);
+//        sampleService.sampleCache2(message);
         log.info("処理終了");
         return str;
     }

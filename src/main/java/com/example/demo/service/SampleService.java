@@ -13,4 +13,10 @@ public class SampleService {
         log.info("キャッシュ効いてない, message=" + message);
         return message;
     }
+
+    @Cacheable("sampleCache2")
+    public String sampleCache2(String message) {
+        log.info("キャッシュ効いてない2, message=" + message);
+        return message;
+    }
 }

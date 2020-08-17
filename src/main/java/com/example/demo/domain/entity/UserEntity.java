@@ -3,7 +3,6 @@ package com.example.demo.domain.entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.domain.Persistable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,9 +14,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-// Persistableをimplementsする
-// 型パラメータにはプライマリキーの型を入れる
-public class UserEntity implements Persistable<String> {
+public class UserEntity {
 
     @Id
     @Column(name = "id")
@@ -28,11 +25,4 @@ public class UserEntity implements Persistable<String> {
 
     @Column(name = "last_name")
     private String lastName;
-
-    @Override
-    public boolean isNew() {
-        // trueの場合、selectを省略してinsertのみ
-        // falseの場合、select後にupdate or insert
-        return true;
-    }
 }

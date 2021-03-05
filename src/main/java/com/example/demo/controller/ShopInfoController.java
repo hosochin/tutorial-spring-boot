@@ -3,10 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.controller.resource.PostShopInfo;
 import com.example.demo.model.ShopDetailInfo;
 import com.example.demo.service.ShopDataService;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ShopInfoController {
@@ -29,8 +26,9 @@ public class ShopInfoController {
      * @param postShopInfo 店舗情報
      */
     @PostMapping("/insertShopInfo")
-    public void insertShopInfo(PostShopInfo postShopInfo) {
-        // TODO
+    public void insertShopInfo(@RequestBody PostShopInfo postShopInfo) {
+        ShopDataService shopDataService = new ShopDataService();
+        shopDataService.insertShopInfo(postShopInfo);
     }
 
     /**
@@ -40,6 +38,7 @@ public class ShopInfoController {
      */
     @DeleteMapping("/deleteShopInfo")
     public void deleteShopInfo(String shopName) {
-        // TODO
+        ShopDataService shopDataService = new ShopDataService();
+        shopDataService.deleteShopInfo(shopName);
     }
 }

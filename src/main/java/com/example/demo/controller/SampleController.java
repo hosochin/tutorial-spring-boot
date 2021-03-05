@@ -18,6 +18,11 @@ public class SampleController {
 
     @GetMapping("/sample3")
     public int get3(int keyword) {
-        return keyword*2;
+        return keyword * 2;
+    }
+
+    @GetMapping("/strConcatenation")
+    public String get4(String keyword1, String keyword2) {
+        return keyword1 + keyword2;
     }
 }

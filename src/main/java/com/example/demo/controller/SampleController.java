@@ -15,4 +15,9 @@ public class SampleController {
     public String get2(String keyword) {
         return keyword;
     }
+
+    @GetMapping("/sample3")
+    public int get3(int keyword) {
+        return keyword*2;
+    }
 }

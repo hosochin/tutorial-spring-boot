@@ -5,6 +5,9 @@ import com.example.demo.model.ShopDetailInfo;
 import com.example.demo.model.ShopInfo;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 店舗情報を扱うクラス
  */
@@ -23,6 +26,22 @@ public class ShopDataService {
             return new ShopDetailInfo("no data", "no data", "no data");
         }
         return ShopInfo.SHOP_INFO_DATA.get(shopName);
+    }
+
+    /**
+     * 店舗検索メソッド(複数キーバージョン)
+     *
+     * @param shopNameList 店舗名リスト
+     * @return 店舗詳細情報リスト
+     */
+    public List<ShopDetailInfo> selectShopInfoList(List<String> shopNameList) {
+        List<ShopDetailInfo> result = new ArrayList<>();
+        for(String shopName : shopNameList) {
+            if (ShopInfo.SHOP_INFO_DATA.containsKey(shopName)) {
+                result.add(ShopInfo.SHOP_INFO_DATA.get(shopName));
+            }
+        }
+        return result;
     }
 
     /**

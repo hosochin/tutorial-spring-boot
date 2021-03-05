@@ -5,6 +5,8 @@ import com.example.demo.model.ShopDetailInfo;
 import com.example.demo.service.ShopDataService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class ShopInfoController {
 
@@ -18,6 +20,18 @@ public class ShopInfoController {
     public ShopDetailInfo searchShopInfo(String shopName) {
         ShopDataService shopDataService = new ShopDataService();
         return shopDataService.selectShopInfo(shopName);
+    }
+
+    /**
+     * 店舗情報を検索するコントローラ(複数キーバージョン)
+     *
+     * @param shopNameList 店舗名リスト
+     * @return 店舗詳細情報
+     */
+    @GetMapping("/searchShopInfoList")
+    public List<ShopDetailInfo> searchShopInfoList(@RequestParam(name = "shopNameList") List<String> shopNameList) {
+        ShopDataService shopDataService = new ShopDataService();
+        return shopDataService.selectShopInfoList(shopNameList);
     }
 
     /**

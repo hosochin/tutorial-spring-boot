@@ -7,6 +7,10 @@ import java.util.Map;
  * 店舗情報データ(DB相当)
  */
 public class ShopInfo {
+    /**
+     * key: 店舗名
+     * value: 店舗詳細情報
+     */
     public static final Map<String, ShopDetailInfo> SHOP_INFO_DATA = new HashMap<>();
 
     static {

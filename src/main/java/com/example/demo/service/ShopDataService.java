@@ -17,6 +17,10 @@ public class ShopDataService {
      * @return 店舗詳細情報
      */
     public ShopDetailInfo selectShopInfo(String shopName) {
+        ShopDetailInfo shopDetailInfo = ShopInfo.SHOP_INFO_DATA.get(shopName);
+        if (shopDetailInfo == null) {
+            return new ShopDetailInfo("no data", "no data", "no data");
+        }
         return ShopInfo.SHOP_INFO_DATA.get(shopName);
     }
 }

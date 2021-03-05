@@ -1,14 +1,17 @@
 package com.example.demo.controller.resource;
 
+/**
+ * 登録店舗情報リクエストボディ
+ */
 public class PostShopInfo {
-    // 店舗名カラム
+    // 店舗名
     private String shopName;
-    // 種別カラム
+    // 種別
     private String type;
-    // 住所カラム
+    // 住所
     private String location;
-    // コメントカラム
-    private String comment;
+    // オーナーコメント
+    private String ownerComment;
 
     public void setShopName(String shopName) {
         this.shopName = shopName;
@@ -22,8 +25,8 @@ public class PostShopInfo {
         this.location = location;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setOwnerComment(String ownerComment) {
+        this.ownerComment = ownerComment;
     }
 
     public String getShopName() {
@@ -38,14 +41,22 @@ public class PostShopInfo {
         return location;
     }
 
-    public String getComment() {
-        return comment;
+    public String getOwnerComment() {
+        return ownerComment;
     }
 
-    public PostShopInfo(String shopName, String type, String location, String comment) {
+    /**
+     * コンストラクタ
+     *
+     * @param shopName     店舗名
+     * @param type         種別
+     * @param location     住所
+     * @param ownerComment オーナーコメント
+     */
+    public PostShopInfo(String shopName, String type, String location, String ownerComment) {
         this.shopName = shopName;
         this.type = type;
         this.location = location;
-        this.comment = comment;
+        this.ownerComment = ownerComment;
     }
 }

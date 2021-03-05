@@ -8,8 +8,8 @@ public class ShopDetailInfo {
     private String type;
     // 住所カラム
     private String location;
-    // コメントカラム
-    private String comment;
+    // オーナーコメントカラム
+    private String ownerComment;
 
     public void setType(String type) {
         this.type = type;
@@ -19,8 +19,8 @@ public class ShopDetailInfo {
         this.location = location;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setOwnerComment(String ownerComment) {
+        this.ownerComment = ownerComment;
     }
 
     public String getType() {
@@ -31,13 +31,20 @@ public class ShopDetailInfo {
         return location;
     }
 
-    public String getComment() {
-        return comment;
+    public String getOwnerComment() {
+        return ownerComment;
     }
 
-    public ShopDetailInfo(String type, String location, String comment) {
+    /**
+     * コンストラクタ
+     *
+     * @param type         種別
+     * @param location     住所
+     * @param ownerComment オーナーコメント
+     */
+    public ShopDetailInfo(String type, String location, String ownerComment) {
         this.type = type;
         this.location = location;
-        this.comment = comment;
+        this.ownerComment = ownerComment;
     }
 }

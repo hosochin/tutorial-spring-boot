@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ShopInfoController {
+
     /**
      * 店舗情報を検索するコントローラ
      *
@@ -17,18 +18,9 @@ public class ShopInfoController {
      * @return 店舗詳細情報
      */
     @GetMapping("/searchShopInfo")
-    public String searchShopInfo(String shopName) {
+    public ShopDetailInfo searchShopInfo(String shopName) {
         ShopDataService shopDataService = new ShopDataService();
-        ShopDetailInfo shopDetailInfo = shopDataService.selectShopInfo(shopName);
-
-        if (shopDetailInfo == null) {
-            return "検索した店舗は存在しません";
-        }
-
-        String type = shopDetailInfo.getType();
-        String location = shopDetailInfo.getLocation();
-        String comment = shopDetailInfo.getComment();
-        return "店舗名：" + shopName + ", 種別：" + type + ", 住所：" + location + ", コメント：" + comment;
+        return shopDataService.selectShopInfo(shopName);
     }
 
     /**

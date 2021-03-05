@@ -25,4 +25,9 @@ public class SampleController {
     public String get4(String keyword1, String keyword2) {
         return keyword1 + keyword2;
     }
+
+    @GetMapping("/calculation/multiplication")
+    public int get5(int number1, int number2) {
+        return number1 * number2;
+    }
 }

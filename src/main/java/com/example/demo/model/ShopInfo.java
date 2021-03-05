@@ -3,6 +3,9 @@ package com.example.demo.model;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 店舗情報データ(DB相当)
+ */
 public class ShopInfo {
     public static final Map<String, ShopDetailInfo> SHOP_INFO_DATA = new HashMap<>();
 

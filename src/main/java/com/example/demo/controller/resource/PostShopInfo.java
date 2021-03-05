@@ -1,15 +1,18 @@
-package com.example.demo.model;
+package com.example.demo.controller.resource;
 
-/**
- * 店舗詳細情報のオブジェクトクラス
- */
-public class ShopDetailInfo {
+public class PostShopInfo {
+    // 店舗名カラム
+    private String shopName;
     // 種別カラム
     private String type;
     // 住所カラム
     private String location;
     // コメントカラム
     private String comment;
+
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
+    }
 
     public void setType(String type) {
         this.type = type;
@@ -21,6 +24,10 @@ public class ShopDetailInfo {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getShopName() {
+        return shopName;
     }
 
     public String getType() {
@@ -35,7 +42,8 @@ public class ShopDetailInfo {
         return comment;
     }
 
-    public ShopDetailInfo(String type, String location, String comment) {
+    public PostShopInfo(String shopName, String type, String location, String comment) {
+        this.shopName = shopName;
         this.type = type;
         this.location = location;
         this.comment = comment;

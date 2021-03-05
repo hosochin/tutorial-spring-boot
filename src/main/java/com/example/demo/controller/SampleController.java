@@ -28,6 +28,11 @@ public class SampleController {
         return keyword1 + keyword2;
     }
 
+    @GetMapping("/calculation/multiplication")
+    public int get5(int number1, int number2) {
+        return number1 * number2;
+    }
+
     /**
      * 店舗情報を検索するコントローラ
      *

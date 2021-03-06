@@ -8,7 +8,7 @@ import java.util.List;
 public class ShopInfoRepository {
 
     /**
-     * 店舗検索メソッド
+     * 店舗検索
      *
      * @param shopName 店舗名
      * @return 店舗詳細情報
@@ -26,7 +26,7 @@ public class ShopInfoRepository {
     }
 
     /**
-     * 店舗名一覧検索メソッド
+     * 店舗名一覧検索
      *
      * @return 店舗名リスト
      */

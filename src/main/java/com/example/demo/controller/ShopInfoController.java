@@ -2,10 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.domain.model.ShopInfo;
 import com.example.demo.service.ShopDataService;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,7 +16,7 @@ public class ShopInfoController {
      * @return 店舗詳細情報
      */
     @GetMapping("/searchShopInfo")
-    public ShopInfo searchShopInfo(String shopName) {
+    public ShopInfo searchShopInfo(@RequestParam(name = "shopName") String shopName) {
         ShopDataService shopDataService = new ShopDataService();
         return shopDataService.searchShopInfo(shopName);
     }
@@ -41,17 +38,7 @@ public class ShopInfoController {
      * @param shopInfo 店舗情報
      */
     @PostMapping("/insertShopInfo")
-    public void insertShopInfo(ShopInfo shopInfo) {
-        // TODO
-    }
-
-    /**
-     * 店舗情報を更新するコントローラ
-     *
-     * @param shopInfo 店舗情報
-     */
-    @PostMapping("/updateShopInfo")
-    public void updateShopInfo(ShopInfo shopInfo) {
+    public void insertShopInfo(@RequestBody ShopInfo shopInfo) {
         // TODO
     }
 
@@ -61,7 +48,14 @@ public class ShopInfoController {
      * @param shopName 店舗名
      */
     @DeleteMapping("/deleteShopInfo")
-    public void deleteShopInfo(String shopName) {
+    public void deleteShopInfo(@RequestParam(name = "shopName") String shopName) {
         // TODO
     }
+
+    /**
+     * 店舗情報を更新するコントローラ
+     *
+     * @param shopInfo 店舗情報
+     */
+    // TODO
 }

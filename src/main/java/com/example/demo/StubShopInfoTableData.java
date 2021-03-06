@@ -16,9 +16,9 @@ public class StubShopInfoTableData {
 
     static {
         // 初期データを投入する
-        SHOP_INFO_DATA.add(new ShopInfo("Yahiko", "ラーメン屋", "長野飯田市", "うまい"));
-        SHOP_INFO_DATA.add(new ShopInfo("Matuya", "牛丼屋", "全国", "ぎり食える、安い"));
-        SHOP_INFO_DATA.add(new ShopInfo("MatidaShoten", "ラーメン屋", "全国", "食える、安い"));
-        SHOP_INFO_DATA.add(new ShopInfo("McDonald", "ハンバーガー屋", "全国", "食える"));
+        SHOP_INFO_DATA.add(new ShopInfo("Yahiko", "ラーメン屋", "長野飯田市", "餃子も美味しいですよ〜"));
+        SHOP_INFO_DATA.add(new ShopInfo("Matuya", "牛丼屋", "全国", "安くてうまい！"));
+        SHOP_INFO_DATA.add(new ShopInfo("MatidaShoten", "ラーメン屋", "全国", "固め・濃いめ・多めがオススメ"));
+        SHOP_INFO_DATA.add(new ShopInfo("McDonald", "ハンバーガー屋", "全国", "デリバリーもやってます"));
     }
 }

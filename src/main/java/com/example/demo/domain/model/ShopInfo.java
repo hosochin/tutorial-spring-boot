@@ -1,15 +1,20 @@
-package com.example.demo.model;
+package com.example.demo.domain.model;
 
-/**
- * 店舗詳細情報のオブジェクトクラス
- */
-public class ShopDetailInfo {
-    // 種別カラム
+//@Entity
+//@Table(name="shop_info")
+public class ShopInfo {
+    // 店舗名
+    private String shopName;
+    // 種別
     private String type;
-    // 住所カラム
+    // 住所
     private String location;
-    // オーナーコメントカラム
+    // オーナーコメント
     private String ownerComment;
+
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
+    }
 
     public void setType(String type) {
         this.type = type;
@@ -21,6 +26,10 @@ public class ShopDetailInfo {
 
     public void setOwnerComment(String ownerComment) {
         this.ownerComment = ownerComment;
+    }
+
+    public String getShopName() {
+        return shopName;
     }
 
     public String getType() {
@@ -38,11 +47,13 @@ public class ShopDetailInfo {
     /**
      * コンストラクタ
      *
+     * @param shopName     店舗名
      * @param type         種別
      * @param location     住所
      * @param ownerComment オーナーコメント
      */
-    public ShopDetailInfo(String type, String location, String ownerComment) {
+    public ShopInfo(String shopName, String type, String location, String ownerComment) {
+        this.shopName = shopName;
         this.type = type;
         this.location = location;
         this.ownerComment = ownerComment;

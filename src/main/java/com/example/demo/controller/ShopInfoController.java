@@ -1,35 +1,57 @@
 package com.example.demo.controller;
 
-import com.example.demo.controller.resource.PostShopInfo;
-import com.example.demo.model.ShopDetailInfo;
+import com.example.demo.domain.model.ShopInfo;
 import com.example.demo.service.ShopDataService;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class ShopInfoController {
 
     /**
-     * 店舗情報を検索するコントローラ
+     * 店舗名で店舗情報を検索するコントローラ
      *
      * @param shopName 店舗名
      * @return 店舗詳細情報
      */
     @GetMapping("/searchShopInfo")
-    public ShopDetailInfo searchShopInfo(String shopName) {
+    public ShopInfo searchShopInfo(String shopName) {
         ShopDataService shopDataService = new ShopDataService();
-        return shopDataService.selectShopInfo(shopName);
+        return shopDataService.searchShopInfo(shopName);
+    }
+
+    /**
+     * 店舗名一覧を返却するコントローラ
+     *
+     * @return 店舗名リスト
+     */
+    @GetMapping("/searchShopNameList")
+    public List<String> searchShopNameList() {
+        ShopDataService shopDataService = new ShopDataService();
+        return shopDataService.searchShopNameList();
     }
 
     /**
      * 店舗情報を登録するコントローラ
      *
-     * @param postShopInfo 店舗情報
+     * @param shopInfo 店舗情報
      */
     @PostMapping("/insertShopInfo")
-    public void insertShopInfo(PostShopInfo postShopInfo) {
+    public void insertShopInfo(ShopInfo shopInfo) {
+        // TODO
+    }
+
+    /**
+     * 店舗情報を更新するコントローラ
+     *
+     * @param shopInfo 店舗情報
+     */
+    @PostMapping("/updateShopInfo")
+    public void updateShopInfo(ShopInfo shopInfo) {
         // TODO
     }
 

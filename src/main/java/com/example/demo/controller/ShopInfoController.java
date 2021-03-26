@@ -39,7 +39,9 @@ public class ShopInfoController {
      */
     @PostMapping("/insertShopInfo")
     public void insertShopInfo(@RequestBody ShopInfo shopInfo) {
-        // TODO
+        System.out.println(shopInfo);
+        ShopDataService shopDataService = new ShopDataService();
+        shopDataService.insertShopInfo(shopInfo);
     }
 
     /**

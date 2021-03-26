@@ -49,7 +49,11 @@ public class ShopDataService {
     /**
      * 店舗情報登録メソッド
      */
-    // TODO
+    public void insertShopInfo(ShopInfo shopInfo) {
+        ShopInfoRepository shopInfoRepository = new ShopInfoRepository();
+        shopInfoRepository.insertShopInfo(shopInfo);
+    }
+
 
     /**
      * 店舗情報更新メソッド

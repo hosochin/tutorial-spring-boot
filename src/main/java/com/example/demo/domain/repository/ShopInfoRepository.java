@@ -44,8 +44,8 @@ public class ShopInfoRepository {
 
         //
 
-    public void insertShopInfo() {
-        // TODO
+    public void insertShopInfo(ShopInfo shopInfo) {
+        StubShopInfoTableData.SHOP_INFO_DATA.add(shopInfo);
     }
 
     public void updateShopInfo() {

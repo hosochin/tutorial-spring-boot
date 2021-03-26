@@ -12,6 +12,9 @@ import java.util.List;
 @Service
 public class ShopDataService {
 
+    public ShopDataService() {
+    }
+
     /**
      * 店舗検索メソッド
      *

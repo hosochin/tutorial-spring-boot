@@ -3,6 +3,7 @@ package com.example.demo.domain.repository;
 import com.example.demo.StubShopInfoTableData;
 import com.example.demo.domain.model.ShopInfo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShopInfoRepository {
@@ -31,9 +32,17 @@ public class ShopInfoRepository {
      * @return 店舗名リスト
      */
     public List<String> selectShopNameList() {
-        // TODO
-        return null;
+
+        List<String> list = new ArrayList<String>();
+
+        for(ShopInfo shopInfo : StubShopInfoTableData.SHOP_INFO_DATA) {
+            list.add(shopInfo.getShopName());
+        }
+
+        return list;
     }
+
+        //
 
     public void insertShopInfo() {
         // TODO

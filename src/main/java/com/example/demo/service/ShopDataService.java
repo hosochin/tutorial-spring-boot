@@ -62,6 +62,10 @@ public class ShopDataService {
 
     /**
      * 店舗情報削除メソッド
+     * @param shopInfo
      */
-    // TODO
+    public void deleteShopInfo(String shopInfo) {
+        ShopInfoRepository shopInfoRepository = new ShopInfoRepository();
+        shopInfoRepository.deleteShopInfo(shopInfo);
+    }
 }

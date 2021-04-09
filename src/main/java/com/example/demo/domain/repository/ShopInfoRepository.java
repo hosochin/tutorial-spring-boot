@@ -52,7 +52,17 @@ public class ShopInfoRepository {
         // TODO
     }
 
-    public void deleteShopInfo() {
-        // TODO
+    public void deleteShopInfo(String shopName) {
+        int i = 0;
+        for (ShopInfo shopInfo : StubShopInfoTableData.SHOP_INFO_DATA) {
+
+            if (shopName.equals(shopInfo.getShopName())) {
+                break;
+
+            }
+            i++;
+        }
+        StubShopInfoTableData.SHOP_INFO_DATA.remove(i);
+
     }
 }

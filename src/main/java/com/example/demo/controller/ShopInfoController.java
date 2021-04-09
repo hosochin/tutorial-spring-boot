@@ -51,8 +51,11 @@ public class ShopInfoController {
      */
     @DeleteMapping("/deleteShopInfo")
     public void deleteShopInfo(@RequestParam(name = "shopName") String shopName) {
-        // TODO
+        ShopDataService shopDataService = new ShopDataService();
+        shopDataService.deleteShopInfo(shopName);
+        System.out.println(searchShopNameList());
     }
+
 
     /**
      * 店舗情報を更新するコントローラ

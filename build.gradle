@@ -22,11 +22,21 @@ sourceCompatibility = 1.8
 repositories {
 	mavenCentral()
 }
+ext {
+	lombokVersion = '1.18.4'
+}
 
 
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
 	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation 'org.hibernate.validator:hibernate-validator:6.1.5.Final'
+	implementation 'jakarta.validation:jakarta.validation-api:2.0.2'
+//	implementation 'javax.el:el-api:2.2'
 	runtimeOnly('org.springframework.boot:spring-boot-devtools')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	compileOnly("org.projectlombok:lombok:${lombokVersion}")
+	testCompileOnly("org.projectlombok:lombok:${lombokVersion}")
+	annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
+	testAnnotationProcessor("org.projectlombok:lombok:${lombokVersion}")
 }

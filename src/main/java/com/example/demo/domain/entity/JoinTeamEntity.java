@@ -8,8 +8,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name="team")
@@ -17,17 +22,18 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-public class TeamEntity implements Serializable {
-
-    @Id
-    @Column(name = "team_id")
-    private String teamId;
-
-    @Column(name = "team_name")
-    private String teamName;
+public class JoinTeamEntity implements Serializable {
 
     @Id
     @Column(name = "user_id")
+    private String teamId;
+
+    private String teamName;
+
+    @Id
     private String userId;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    private UserEntity user;
 }

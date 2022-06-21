@@ -8,6 +8,7 @@ import org.springframework.data.domain.Persistable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -19,9 +20,11 @@ public class UserEntity {
 
     @Id
     @Column(name = "user_id")
+//    @JoinColumn(name = "user_id")
     private String userId;
 
-    @Column(name = "user_name")
-    private String useName;
+//    @Column(name = "user_name")
+//    @JoinColumn(name = "user_name")
+    private String userName;
 
 }

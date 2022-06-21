@@ -1,8 +1,12 @@
-package com.example.demo.domain.repository.sample01;
+package com.example.demo.domain.repository;
 
 import com.example.demo.domain.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-public interface UserRepository extends JpaRepository<UserEntity, String> {}
+public interface UserRepository extends JpaRepository<UserEntity, String> {
+
+
+
+}
 

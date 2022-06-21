@@ -1,20 +1,11 @@
 version: '3.3'
 services:
-  sample01:
+  test_db:
     image: mysql:5.6
     environment:
       MYSQL_ROOT_PASSWORD: secret
-      MYSQL_DATABASE: sample01
+      MYSQL_DATABASE: test_db
     ports:
       - "3315:3306"
     volumes:
-      - ./docker/mysql/sample01/initdb.d:/docker-entrypoint-initdb.d
-  sample02:
-    image: mysql:5.7
-    environment:
-      MYSQL_ROOT_PASSWORD: secret
-      MYSQL_DATABASE: sample02
-    ports:
-      - "3316:3306"
-    volumes:
-      - ./docker/mysql/sample02/initdb.d:/docker-entrypoint-initdb.d
+      - ./docker/mysql/test_db/initdb.d:/docker-entrypoint-initdb.d

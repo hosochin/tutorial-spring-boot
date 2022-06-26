@@ -15,8 +15,8 @@ public class SampleController {
 
     @GetMapping("/sample")
     public Object get() {
-//        return teamRepository.find("A");
-        return teamRepository.findAll();
+        return teamRepository.find("A");
+//        return teamRepository.findAll();
 //        return null;
     }
 

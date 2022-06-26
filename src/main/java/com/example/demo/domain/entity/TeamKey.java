@@ -10,7 +10,6 @@ import java.io.Serializable;
 public class TeamKey implements Serializable {
 
     @Id
-//    @Column(name = "team_id")
     private String teamId;
 
     @Id

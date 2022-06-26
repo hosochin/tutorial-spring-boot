@@ -20,11 +20,8 @@ public class UserEntity {
 
     @Id
     @Column(name = "user_id")
-//    @JoinColumn(name = "user_id")
     private String userId;
 
-//    @Column(name = "user_name")
-//    @JoinColumn(name = "user_name")
     private String userName;
 
 }

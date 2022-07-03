@@ -1,21 +1,15 @@
 package com.example.demo.domain.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import org.springframework.data.domain.Persistable;
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="user")
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
+@Data
 public class UserEntity {
 
     @Id

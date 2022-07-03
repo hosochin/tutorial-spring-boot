@@ -11,7 +11,7 @@ import java.util.List;
 public interface TeamRepository extends JpaRepository<JoinTeamEntity, TeamKey> {
 
         @Query("SELECT t FROM JoinTeamEntity t LEFT JOIN FETCH t.user")
-        List<JoinTeamEntity> find(@Param("teamName") String teamName);
+        List<JoinTeamEntity> findAll();
 
 //    @Query("SELECT t FROM JoinTeamEntity t " +
 //            "LEFT JOIN UserEntity u ON t.userId WHERE t.teamName = :teamName")

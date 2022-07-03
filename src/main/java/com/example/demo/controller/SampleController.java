@@ -15,15 +15,16 @@ public class SampleController {
 
     @GetMapping("/sample")
     public Object get() {
-        return teamRepository.find("A");
+//        return teamRepository.find("A");
 //        return teamRepository.findAll();
-//        return null;
+        return null;
     }
 
     @GetMapping("/sample2")
     public Object get2() {
 //        return teamRepository.find("A");
-        return userRepository.findAll();
+        return teamRepository.findAll();
+//        return userRepository.findAll();
 //        return null;
     }
 

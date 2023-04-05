@@ -1,1 +1,5 @@
-
+spring:
+  cache:
+    cache-names: sampleCache, sampleCache2
+    caffeine:
+      spec: refreshAfterWrite=3s

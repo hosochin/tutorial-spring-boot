@@ -1,0 +1,10 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class SampleComponent {
+    public String getSampleComponentMessage() {
+        return "message";
+    }
+}

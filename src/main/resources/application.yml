@@ -1,1 +1,6 @@
+# 機能フラグ設定
+# 環境変数で上書き可能: FEATURE_NEW_UI_ENABLED=true など
+feature:
+  # 新しいUI機能
+  new-ui-enabled: true
 

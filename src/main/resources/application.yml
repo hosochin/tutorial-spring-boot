@@ -1,1 +1,5 @@
+# 機能フラグ設定
+feature:
+  # 新しいUI機能
+  new-ui-enabled: ${FEATURE_NEW_UI_ENABLED:false}
 
